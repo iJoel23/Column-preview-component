@@ -1,0 +1,143 @@
+/*
+  1. Reset:
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+:root {
+  --color-bright-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+  --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --color-very-light-gray: hsl(0, 0%, 95%);
+  --font-primary: "Big Shoulders Display", cursive;
+  --font-secundary: "Lexend Deca", sans-serif;
+  --font-size-paragraph: 0.93rem;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+/* 2. Styles: */
+body {
+  display: grid;
+  place-content: center;
+  height: 200vh;
+}
+.card__container {
+  display: grid;
+  background-color: blue;
+  margin: 2em;
+  border-radius: 0.8em;
+  overflow: hidden;
+}
+.card__content {
+  max-width: 255px;
+  padding: 2.5em;
+}
+.card--yellow {
+  background: var(--color-bright-orange);
+}
+.btn--yellow {
+  color: var(--color-bright-orange);
+}
+.card--dark-cyan {
+  background: var(--color-dark-cyan);
+}
+.btn--dark-cyan {
+  color: var(--color-dark-cyan);
+}
+.card--very-dark-cyan {
+  background: var(--color-very-dark-cyan);
+}
+.btn--very-dark-cyan {
+  color: var(--color-very-dark-cyan);
+}
+.card__title {
+  text-transform: uppercase;
+  color: var(--color-very-light-gray);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+}
+.card__title,
+.card__text {
+  margin: 1.1em 0;
+}
+.card__text,
+.card__btn {
+  font-family: var(--font-secundary);
+  font-weight: var(--font-weight-regular);
+}
+.card__text {
+  font-size: var(--font-size-paragraph);
+  color: var(--color-transparent-white);
+}
+.card__btn {
+  border-radius: 2em;
+  padding: 0.8em 1.5em;
+  border: none;
+  background-color: var(--color-very-light-gray);
+  font-size: var(--font-size-paragraph);
+  margin-top: 1em;
+}
+@media (min-width: 600px) {
+  body {
+    height: 100vh;
+  }
+  .card__title {
+    font-size: 1.8rem;
+  }
+  .card__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 467px;
+  }
+  .card__btn {
+    margin-top: 3em;
+    transition: 0.3s;
+  }
+  .card__btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--color-very-light-gray);
+    color: var(--color-very-light-gray);
+    cursor: pointer;
+  }
+}
