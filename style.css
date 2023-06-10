@@ -113,7 +113,7 @@ body {
 .card__btn {
   border-radius: 2em;
   padding: 0.8em 1.5em;
-  border: none;
+  border: 2px solid white;
   background-color: var(--color-very-light-gray);
   font-size: var(--font-size-paragraph);
   margin-top: 1em;
